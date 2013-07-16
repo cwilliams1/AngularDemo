@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>7b79d1cd-b1e3-4207-804c-e26bc77b2844</ProjectGuid>
+    <ProjectGuid>{440E3119-2C76-4DE3-9BEB-BD1F669C0557}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AngularDemoTests</RootNamespace>
