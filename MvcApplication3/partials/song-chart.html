@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>List of top songs on Last.fm today</h1>
+  Search:
+      <input ng-model="query" />
+  Sort:
+      <select ng-model="orderProp">
+        <option value="rank">Rank</option>
+        <option value="name">Title</option>
+        <option value="artist.name">Artist</option>
+        <option value="-listeners">Listeners</option>
+        <option value="-playcount">Plays</option>
+      </select>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Listeners</th>
+        <th>Plays</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="song in songs | filter:query | orderBy:orderProp">
+        <td>{{song.rank}}</td>
+        <td>{{song.name}} <a href="{{song.url}}">*</a></td>
+        <td><a href="#/artist/{{song.artist.name}}">{{song.artist.name}}</a></td>
+        <td>{{song.listeners}}</td>
+        <td>{{song.playcount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

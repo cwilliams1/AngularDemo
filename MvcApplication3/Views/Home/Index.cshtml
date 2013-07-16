@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="Content/bootstrap.css"/>
+  <link rel="stylesheet" href="Content/app.css" />
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/songs">Chart</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+  -->
+  <script src="Scripts/jquery-2.0.1.min.js"></script>
+  <script src="Scripts/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

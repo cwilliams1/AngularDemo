@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <h1>{{artist.name}}
+        <a href="{{artist.url}}">*</a>
+      </h1>
+      <img src="{{artist.image[4]['#text']}}" />
+    </div>
+    <div class="span6">
+      <ul>
+        <li>Listeners: {{artist.stats.listeners}}</li>
+        <li>Plays: {{artist.stats.playcount}}</li>
+        <li>Similar Artists:
+      <ul>
+        <li ng-repeat="similar in artist.similar.artist">
+          <img src="{{similar.image[1]['#text']}}" />
+          {{similar.name}}
+          <a href="{{similar.url}}">*</a>
+        </li>
+      </ul>
+        </li>
+        <li>Tags:
+          <ul>
+            <li ng-repeat="tag in artist.tags.tag">{{tag.name}}
+              <a href="{{tag.url}}">*</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
